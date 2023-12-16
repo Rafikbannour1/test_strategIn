@@ -1,11 +1,21 @@
 import React from 'react';
+import './home.scss' ;
 
 const Home = () => {
   return (
-    <div>
-      <h1>Bienvenue sur Test StrategIn</h1>
-      <p>Ceci est une application de test pour la plateforme d'authentification.</p>
-    </div>
+<div className="wrap">
+  <ul className="title">
+    <li>B</li>
+    <li>I</li>
+    <li>E</li>
+    <li>N</li>
+    <li>V</li>
+    <li>E</li>
+    <li>N</li>
+    <li>U</li>
+    <li>E</li>
+  </ul>
+</div>
   );
 }
 

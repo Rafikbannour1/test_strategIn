@@ -11,7 +11,7 @@ require("dotenv").config();
      
         const token = req.headers["authorization"].split(" ")[1] ;
        
-      jwt.verify(token, process.env.JWT_SECRET_KEY, (err, payload) => {
+      jwt.verify(token, process.env.JWT_SECRET_KEY_ACCESS, (err, payload) => {
         if (err) {
           throw new Error('Non autorisé') ; 
         }
