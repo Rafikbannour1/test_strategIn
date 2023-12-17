@@ -2,7 +2,7 @@
 
 Cette application permet aux utilisateurs de s'inscrire et de se connecter à la plateforme pour visualiser une liste d'utilisateurs. 
 Elle est développée avec le backend pour construire des API.  
-Et comme un plus : des interfaces avec React.js et des tests fonctionnels avec Cypress Cucumber et Gherkin. 
+Et comme un plus : des interfaces avec React.js et des tests fonctionnels automatisés avec Cypress Cucumber et Gherkin. 
 
 # Fonctionnalités
 Inscription : Les utilisateurs peuvent s'inscrire avec un adresse e-mail et un mot de passe.
