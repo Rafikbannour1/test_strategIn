@@ -12,4 +12,5 @@ Gestion des utilisateurs : Les utilisateurs connectés peuvent accéder à la li
 # Technologies utilisées
 Backend : Node.js.
 Frontend : React.js , html ,css .
+Tests unitaire : Jest. 
 Tests fonctionnels : Cypress ,Cucumber , Gherkin.
