@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"rafik.bannour59@gmail.com\",\r\n    \"password\" : \"147258@A\",\r\n    \"confirmPassword\" : \"147258@A\", \r\n    \"fullname\" : \"Rafik Bannour\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"rafik.bannour7@gmail.com\",\r\n    \"password\" : \"147258A\",\r\n    \"confirmPassword\" : \"147258A\",\r\n    \"fullname\":\"rafik\"\r\n   \r\n    \r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"rafik.bannour99@gmail.com\"\r\n\r\n\r\n}",
+							"raw": "{\r\n    \"email\" : \"rafik.bannour99@gmail.com\",\r\n    \"password\":\"147258A\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -72,7 +72,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"refreshToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdiOTBmMjQ1NTY1NTlhNmM0OWU1YjYiLCJlbWFpbCI6InJhZmlrLmJhbm5vdXI5OUBnbWFpbC5jb20iLCJpYXQiOjE3MDI2NjAxMjMsImV4cCI6MTczNDIxNzcyM30.ag-UEgUapyzk7T5JmD9POh1q-O_bmT-rRpMWfLiWIFM\"\r\n}",
+							"raw": "{\r\n    \"refreshToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdlMWMzMGZkNjJlNzMzNTJiZDhiMTciLCJlbWFpbCI6InJhZmlrLmJhbm5vdXI5OUBnbWFpbC5jb20iLCJpYXQiOjE3MDI4MzQ0NTcsImV4cCI6MTczNDM5MjA1N30.SKnzVj6XfV51ygvkiKe-1ZIHh-Lf-TPB6LfODAi9E0k\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -106,7 +106,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdiOTBmMjQ1NTY1NTlhNmM0OWU1YjYiLCJlbWFpbCI6InJhZmlrLmJhbm5vdXI5OUBnbWFpbC5jb20iLCJpYXQiOjE3MDI2NTQxOTAsImV4cCI6MTcwMjY1Nzc5MH0.qnkpgwW0ZjPFXwnw3WXFBiQjzHyWeW0creca3IJfCmo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdlMWMzMGZkNjJlNzMzNTJiZDhiMTciLCJlbWFpbCI6InJhZmlrLmJhbm5vdXI5OUBnbWFpbC5jb20iLCJpYXQiOjE3MDI4MjgzMDYsImV4cCI6MTcwMjgzMTkwNn0.koYphzX8YoUx8z6ST3o8l0Ro-ofwkHKetmpG0CPhLsg",
 									"type": "string"
 								}
 							]

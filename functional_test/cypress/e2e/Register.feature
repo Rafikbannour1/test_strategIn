@@ -18,7 +18,7 @@ Alors Message erreur 'L\'adresse e-mail n\'est pas valide.' est affiche
 
 Scénario: [GESTION DES COMPTES] S'inscrire avec un mot de passe non conforme
 Quand Je clique sur le boutton Register dans le menu
-Et Je saisis les informations d'inscription avec un mot de passe non conforme: email : "rafik.bannour119905@gmail.com", fullName : "rafik bnr", password : "weakpassword", confirmPassword : "weakpassword"
+Et Je saisis les informations d'inscription avec un mot de passe non conforme: email : "rafik.bannour119@gmail.com", fullName : "rafik bnr", password : "weakpassword", confirmPassword : "weakpassword"
 Alors Message erreur 'Le mot de passe ne respecte pas les règles de complexité.' est affiche
 
 
