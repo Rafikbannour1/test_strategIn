@@ -8,7 +8,7 @@ Etant donné Le navigateur est ouvert et je suis sur la page accueil non connect
 
 Scénario: [GESTION DES COMPTES] S'inscrire (informations valides)
 Quand Je clique sur le boutton Register dans le menu
-Et Je saisis les informations d'inscription valide: email : "rafik.bannour932147@gmail.com",fullName : "rafik bnr" ,password : "147258E" ,confirmPassword : "147258E" 
+Et Je saisis les informations d'inscription valide: email : "rafik.bannour93214o@gmail.com",fullName : "rafik bnr" ,password : "147258E" ,confirmPassword : "147258E" 
 Alors la formulaire "Login" est affiché
 
 Scénario: [GESTION DES COMPTES] S'inscrire avec email invalide
