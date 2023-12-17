@@ -12,25 +12,25 @@ const registerUser = async (req, res) => {
     const { email, password, confirmPassword, fullname } = req.body;
 
     if (!validateEmail(email)) {
-        return res.status(400).json({ message: 'L\'adresse e-mail n\'est pas valide.' });
-      }
-    
-    if(!validatePassword(password))  {
-        return res.status(400).json({ message: 'Le mot de passe ne respecte pas les règles de complexité.' });
+      return res.status(400).json({ message: 'L\'adresse e-mail n\'est pas valide.' });
+    }
+
+    if (!validatePassword(password)) {
+      return res.status(400).json({ message: 'Le mot de passe ne respecte pas les règles de complexité.' });
     }
 
     if (password !== confirmPassword) {
-        return res.status(400).json({ message: 'Les mots de passe ne correspondent pas.' });
+      return res.status(400).json({ message: 'Les mots de passe ne correspondent pas.' });
     }
-     
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ message: 'L\'utilisateur avec cet e-mail existe déjà.' });
     }
-    
-    const hashedPassword = await bcrypt.hash(password,10);
-    
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Utiliser une requête paramétrée pour empêcher l'injection 
     const newUser = new User({ email, password: hashedPassword, fullname });
     await newUser.save();
 
@@ -41,6 +41,7 @@ const registerUser = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 const login = async (req, res) => {
   try {
