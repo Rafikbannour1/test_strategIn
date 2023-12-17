@@ -1,4 +1,4 @@
-# Test technique 
+# Test technique StrategIn
 
 Cette application permet aux utilisateurs de s'inscrire et de se connecter à la plateforme pour visualiser une liste d'utilisateurs. 
 
