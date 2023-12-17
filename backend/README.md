@@ -33,7 +33,7 @@ JWT_SECRET_KEY_REFRESH=09aafw52dn854zef58eme84578ene858seq875g8rezu875uiomoi8955
 
 ## Tests Unitaires
 
-Nous avons mis en place des tests unitaires pour garantir la robustesse et la fiabilité de notre code.
+J'ai mis en place des tests unitaires pour garantir la robustesse et la fiabilité de mon code.
 Pour exécuter les tests, vous pouvez utiliser la commande suivante :
 
 ```bash
