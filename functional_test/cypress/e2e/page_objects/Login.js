@@ -7,12 +7,6 @@ let Login = function () {
 	this.bouttonDeconnexion = '._logout';
 	this.alertLoginError = '._login_alert_error';
 
-	this.verifAlerteErrorEmail = async function (messageError) {
-
-		cy.get(this.alertEmailError).should('contain.text', messageError);
-
-	};
-
 	this.login = async function (email, password) {
 
 		cy.on('uncaught:exception', (err, runnable) => {

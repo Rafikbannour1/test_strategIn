@@ -1,4 +1,4 @@
-# Automatisation BackOffice DIGISAP
+# Automatisation STRATEGIN TEST
 
 Outil de test d'automatisation des tests de non regresion
 
