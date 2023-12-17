@@ -12,7 +12,7 @@ jest.mock('bcrypt');
 jest.mock('jsonwebtoken');
 
 beforeAll(async () => {
-  await connectDB(); 
+  await connectDB();
 });
 
 describe("Auth Controller - registerUser", () => {
@@ -140,7 +140,7 @@ describe('Auth Controller - login', () => {
 
     const response = await request(app)
       .post('/login')
-      .send({ email: 'rafik.bannour99@gmail.com', password: '147258@A' });
+      .send({ email: 'rafik.bannour97@gmail.com', password: '14725@A' });
 
     expect(response.status).toBe(401);
     expect(response.body).toEqual({ message: 'L\'adresse e-mail ou le mot de passe est incorrect.' });
@@ -186,9 +186,7 @@ describe('Auth Controller - login', () => {
 
 });
 
-afterAll(async () => {
-    await closeDB();
-});
+
 
 
  

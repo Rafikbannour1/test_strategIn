@@ -5,15 +5,16 @@ const Home = () => {
   return (
 <div className="wrap">
   <ul className="title">
-    <li>B</li>
+    <li>S</li>
+    <li>T</li>
+    <li>R</li>
+    <li>A</li>
+    <li>T</li>
+    <li>E</li>
+    <li>G</li>
+    <li>.</li>
     <li>I</li>
-    <li>E</li>
     <li>N</li>
-    <li>V</li>
-    <li>E</li>
-    <li>N</li>
-    <li>U</li>
-    <li>E</li>
   </ul>
 </div>
   );
