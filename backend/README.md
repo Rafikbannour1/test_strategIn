@@ -1,6 +1,6 @@
 # testStrategIn backend
 
-Le projet consiste en le développement d'une application permettant aux utilisateurs de s'inscrire en fournissant des informations de base.
+Le projet consiste en le développement d'une application qui permet aux utilisateurs de s'inscrire en fournissant des informations de base. Les utilisateurs doivent créer un compte en utilisant leur adresse e-mail et un mot de passe sur la route /register, puis se connecter en utilisant la route /login pour récupérer un token. Une fois connecté, les utilisateurs peuvent accéder à la liste des utilisateurs déjà enregistrés sur la plateforme via la route /users.
 
 ## Table des matières
 
