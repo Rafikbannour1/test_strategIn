@@ -43,9 +43,10 @@ const Register = () => {
     <div id="feedback-form">
       <h2 className="header">Register</h2>
       <div>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {error && <p className="_alert_error" style={{ color: 'red' }}>{error}</p>}
         <form onSubmit={handleSubmit}>
           <input
+            id='_username_register'
             type="text"
             name="email"
             placeholder="Email"
@@ -53,6 +54,7 @@ const Register = () => {
             onChange={handleChange}
           />
           <input
+            id='_fullName'
             type="text"
             name="fullname"
             placeholder="fullName"
@@ -60,6 +62,7 @@ const Register = () => {
             onChange={handleChange}
           />
           <input
+            id='_password_register'
             type="password"
             name="password"
             placeholder="Password"
@@ -67,6 +70,7 @@ const Register = () => {
             onChange={handleChange}
           />
           <input
+            id='_confirmPassword_register'
             type="password"
             name="confirmPassword"
             placeholder="Confirm Password"

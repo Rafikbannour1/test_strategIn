@@ -7,7 +7,7 @@ const NavBar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    navigate('/login');
+    navigate('/');
   };
 
   const isAuthenticated = localStorage.getItem('token');
@@ -15,20 +15,21 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <h2 style={{ color: "#0d47a1" }}>STRATEGIN</h2>
+        <h2 className='_navbar_title' style={{ color: "#0d47a1" }}>STRATEGIN</h2> 
+        {isAuthenticated && ( <h5 className='_pageTitle'> Welcome  </h5> ) }
         <ul>
           {isAuthenticated ? (
            
-            <li>
+            <li className='_logout'>
               <a href="#" onClick={handleLogout}>Logout</a>
             </li>
           ) : (
             
             <>
-              <li>
+              <li className='_register'>
                 <Link to="/register">Register</Link>
               </li>
-              <li>
+              <li className='_login'>
                 <Link to="/login">Login</Link>
               </li>
             </>

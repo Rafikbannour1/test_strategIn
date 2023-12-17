@@ -1,0 +1,45 @@
+{
+  "scripts": {
+    "delete_reportFolder": "rd /s /q cypress/results/mochawesome-report/",
+    "report_copyScreenshots": "cp -r cypress/screenshots TestReport/assets",
+    "test": "npx cypress run",
+    "report": "node report.js",
+    "merge_reports": "mochawesome-merge cypress/results/mochawesome-report/*.json > cypress/results/mochawesome-report/cypress-combined-report.json",
+    "create_html_report": "npm run merge_reports && marge --reportDir TestReport cypress-combined-report.json"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^12.12.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-downloadfile": "^1.2.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-junit-reporter": "^1.3.1",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-multi-reporters": "1.6.1",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^9.1.4",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1",
+    "multiple-cucumber-html-reporter": "^1.18.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/e2e",
+    "stepDefinitions": "cypress/e2e",
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.7.6",
+    "cypress-tags": "^1.1.2"
+  }
+}

@@ -40,11 +40,12 @@ const Login = () => {
   
   return (
     <div id="feedback-form">
-      <h2 className="header">Login</h2>
+      <h2 className="_loginHeader">Login</h2>
       <div>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {error && <p className='_alert_error' style={{ color: 'red' }}>{error}</p>}
         <form onSubmit={handleSubmit}>
           <input
+            id='_username'
             type="text"
             name="email"
             placeholder="Email"
@@ -52,6 +53,7 @@ const Login = () => {
             onChange={handleChange}
           />
           <input
+            id='_password'
             type="password"
             name="password"
             placeholder="Password"

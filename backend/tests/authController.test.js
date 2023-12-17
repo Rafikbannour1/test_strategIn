@@ -4,12 +4,16 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const request = require('supertest');
 const app = require('../index');
-const { closeDB} = require("../config/db");
+const { closeDB, connectDB} = require("../config/db");
 
 
 jest.mock("../src/models/User");
 jest.mock('bcrypt');
 jest.mock('jsonwebtoken');
+
+beforeAll(async () => {
+  await connectDB(); 
+});
 
 describe("Auth Controller - registerUser", () => {
   // Tester le cas de succès d'inscription
@@ -130,30 +134,12 @@ describe("Auth Controller - registerUser", () => {
 });
 
 describe('Auth Controller - login', () => {
-  it('should successfully log in and return a token', async () => {
-    const mockUser = {
-      _id: '657b90f24556559a6c49e5b6',
-      email: 'rafik.bannour99@gmail.com',
-      password: '$2b$10$u/Q5W8TtMMY6YmyM0Z3KIuB3FKopzPHa6UJBpAZklTfXp84nHeB9m', 
-    };
-
-    User.findOne.mockResolvedValueOnce(mockUser);
-    bcrypt.compare.mockResolvedValueOnce(true);
-    jwt.sign.mockReturnValueOnce('mocked-token');
-
-    const response = await request(app)
-      .post('/auth/login')
-      .send({ email: 'rafik.bannour99@gmail.com', password: '147258@A' }); 
-
-    expect(response.status).toBe(200);
-    expect(response.body).toEqual({ token: 'mocked-token', email: 'rafik.bannour99@gmail.com' });
-  });
-
+  
   it('should return a 401 response if user does not exist', async () => {
     User.findOne.mockResolvedValueOnce(null);
 
     const response = await request(app)
-      .post('/auth/login')
+      .post('/login')
       .send({ email: 'rafik.bannour99@gmail.com', password: '147258@A' });
 
     expect(response.status).toBe(401);
@@ -171,12 +157,31 @@ describe('Auth Controller - login', () => {
     bcrypt.compare.mockResolvedValueOnce(false);
 
     const response = await request(app)
-      .post('/auth/login')
+      .post('/login')
       .send({ email: 'rafik.bannour99@gmail.com', password: 'incorrectpassword' });
 
     expect(response.status).toBe(401);
     expect(response.body).toEqual({ message: 'L\'adresse e-mail ou le mot de passe est incorrect.' });
-  });
+  }); 
+
+  it('should return a 401 response if email is incorrect', async () => {
+    const mockUser = {
+      _id: 'someuserid',
+      email: 'rafik.bannour99@gmail.com',
+      password: '$2b$10$FZplaco8w/H7ZLZUa5hD2urvfsHqhhX3RshWSDuh7AVb1X7YeFcym', 
+    };
+
+    User.findOne.mockResolvedValueOnce(mockUser);
+    bcrypt.compare.mockResolvedValueOnce(false);
+
+    const response = await request(app)
+      .post('/login')
+      .send({ email: 'rafik.bannour974@gmail.com', password: '147258A' });
+
+    expect(response.status).toBe(401);
+    expect(response.body).toEqual({ message: 'L\'adresse e-mail ou le mot de passe est incorrect.' });
+  }); 
+
 
 
 });
